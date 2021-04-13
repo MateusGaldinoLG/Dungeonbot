@@ -7,6 +7,10 @@ It has as a reading command the section symbol § (alt gr + '+' in windows and b
 If the word after the symbol is equal to one of its commands, it read the command and send as answer the message with the command's content  
 Ele possui como comando de leitura o simbolo de parágrafo § (alt gr + '+' no windows e um botão atrás do ¶ no android). 
 Se a palavra depois do símbolo for correspondente a um de seus comandos, ele irá ler o comando e mandar uma mensagem de resposta com o conteúdo correspondente ao comando  
-ex:
-
+EX1: command index called using "§olá" or "§ola" / comando index chamado a partir de "§olá" ou "§ola"
+![exemplo ola](/imgs/Discordbot1.png)   
+EX2: embed command to a certain D&D class, called using "§artifice" / comando do tipo embed para uma classe específica do D&D, chamado a partir de "§artifice"  
+![exemplo embed](/imgs/Discordbot2.png)  
+EX3: correction command based on a common mistake by users / comando de correção baseado em um erro comum dos usuários  
+![exemplo correcao](/imgs/Discordbot3.png)  
 ## How the code works? / Como o código funciona?
