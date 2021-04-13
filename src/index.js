@@ -12,4 +12,4 @@ const comandos = require("./comandosteste")
 client.on("message", comandos)
 
 keepAlive()
-client.login("ODIzMjA4MjU2MjM4MjU2MTU4.YFdebg.hCy0HCio9COqd7dBI5inpzBVxac")
+client.login("")//insert your bot token here
