@@ -9,4 +9,4 @@ Ele possui como comando de leitura o simbolo de parágrafo § (alt gr + '+' no w
 Se a palavra depois do símbolo for correspondente a um de seus comandos, ele irá ler o comando e mandar uma mensagem de resposta com o conteúdo correspondente ao comando  
 ex:
 
-##How the code works? / Como o código funciona?
+## How the code works? / Como o código funciona?
