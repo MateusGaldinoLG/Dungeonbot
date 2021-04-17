@@ -13,4 +13,39 @@ EX2: embed command to a certain D&D class, called using "§artifice" / comando d
 ![exemplo embed](/imgs/Discordbot2.png)  
 EX3: correction command based on a common mistake by users / comando de correção baseado em um erro comum dos usuários  
 ![exemplo correcao](/imgs/Discordbot3.png)  
+
 ## How the code works? / Como o código funciona?
+After it started running, with **_node index.js_**, the Discord client logs in the bot and waits an event to happen inside Discord. Two types of events it waits are: "ready", emitted when the client is logged on the account, and "message", emitted when a message is send inside the server where the bot is on.  
+Ao rodar, com **_node index.js_**, o cliente do discord loga no bot e espera um evento acontecer dentro do discord, dois eventos que ele espera são: "ready", emitido quando o cliente entra na conta, e o "message", quando alguém manda mensagem dentro do servidor onde o bot está.  
+```javascript
+const Discord = require("discord.js")
+const client = new Discord.Client() //creates a new client
+
+client.on("ready", () => {
+    console.log(`Logged in as ${client.user.tag} !`)
+} ) //waits for ready, if ready logs the user tag of the client
+
+const comandos = require("./comandosteste") 
+client.on("message", comandos) //waits for message, if message, uses a callback function located in the comandos.js file
+
+client.login("bot password goes here") //logs on the account
+```
+The callback function called by the message event is located in the comandoteste.js file and is responsible for processing the message and linking the especific command with the embed the user wants to use.  
+A função Callback chamada pelo evento de mensagem está localizada no arquivo comandosteste.js e é responsavel por tratar a mensagem e relacionar o comando com o embed específico que o usuário deseja usar  
+```javascript
+module.exports = async function (msg){
+  if (msg.author.bot) return //watches not to reply to itself
+
+  let tokens = msg.content.split(" "); //divides the whole message into small tokens
+  let command = tokens.shift(); //gets the first token
+  if(command.charAt(0) === "§"){ //sees if first token has the § symbol
+    command = command.substring(1); //creates a new string with all the characters after §
+    if(command in CommandsClasses){ //if the new string is in the object CommandsClasses, does the function inside it
+      CommandsClasses[command](msg);
+    }
+    else if (command in ComandsGerais){ //if the new string is in the object ComandsGerais, does the function inside it
+      ComandsGerais[command](msg);
+    }
+  }
+}
+```
