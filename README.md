@@ -49,3 +49,27 @@ module.exports = async function (msg){
   }
 }
 ```
+To relationate the command with the embed, the bot utilizes a command object. This object has functions that call the specific embed if the command is equal to one of its properties.  
+Para relacionar o comando com o embed, foi utilizado um objeto de comandos que possui uma função que chama o embed caso esse comando for igual a uma de suas propriedades. 
+```javascript
+const artifice = require("./embeds/embed"); 
+const CommandsClasses = { //object
+  artifice: (msg) =>{msg.channel.send(artifice.artificeEmb)} //property with a function related to the embed
+}
+```
+The embeds are located in a different folder and are created with the MessageEmbed() function from Discord.js. Each embed is exported as a different function.
+Os embeds estão em uma pasta separada e são criados com a função MessageEmbed() do Discord.js. Cada embed é exportado como uma função separada.
+```javascript
+const artificeEmb = new Discord.MessageEmbed() 
+  .setColor('#0099ff') 
+  .setTitle('Artifice')
+  .addFields(
+    {name: 'Características de classe: ', value: 'Valor de habilidade: Inteligência, seguido de Constituição ou Destreza \n Vida base: 8 + constituição \n Dado de vida: 1d8 + modificador de constituição \n '},
+    {name: 'Proficiências:', value: 'Armadura: Armaduras leves, armaduras médias e escudos \n Armas: armas simples \n Ferramentas: ferramenta do ladrão, ferramenta do construtor, um tipo de ferramenta de artesão de sua escolha \n Testes de resistência: Constituição, Inteligência \n Pericias: duas entre: arcanismo, história, investigação, medicina natureza, percepção e prestedigitação', inline: true},
+    {name: 'Equipamentos:', value: 'Quaisquer duas armas simples de sua escolha \nbesta leve e 20 dardos \n(a) Armadura de coura batido ou (b) armadura segmentada ', inline: true},
+    {name: 'Para otimização:', value: 'https://rpgbot.net/dnd5/characters/classes/artificer/'},
+    {name: 'Para habilidades de classe:', value: 'http://dnd5e.wikidot.com/artificer'}
+    )
+  .setImage('https://dreionsden.files.wordpress.com/2019/12/artificer.png')
+module.exports.artificeEmb = artificeEmb;
+```
