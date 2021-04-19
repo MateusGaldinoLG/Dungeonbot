@@ -2,6 +2,10 @@
 DungeonBot repository. Discord bot focused on Dungeons and Dragons 5e content.  
 Repositorio do DungeonBot. Bot do Discord focado em conteúdo do RPG Dungeons and Dragons 5e
 
+## Sections:
+[How it works on Discord? / Como ele funciona no Discord?](##how-it-works-on-discord?-/-como-ele-funciona-no-discord?)  
+[How the code works? / Como o código funciona?](##how-the-code-works?-/-como-o-código-funciona?)
+
 ## How it works on Discord? / Como ele funciona no Discord?
 It has as a reading command the section symbol § (alt gr + '+' in windows and behind the ¶ button on android).
 If the word after the symbol is equal to one of its commands, it read the command and send as answer the message with the command's content  
@@ -57,7 +61,7 @@ const CommandsClasses = { //object
   artifice: (msg) =>{msg.channel.send(artifice.artificeEmb)} //property with a function related to the embed
 }
 ```
-The embeds are located in a different folder and are created with the MessageEmbed() function from Discord.js. Each embed is exported as a different function.
+The embeds are located in a different folder and are created with the MessageEmbed() function from Discord.js. Each embed is exported as a different function.  
 Os embeds estão em uma pasta separada e são criados com a função MessageEmbed() do Discord.js. Cada embed é exportado como uma função separada.
 ```javascript
 const artificeEmb = new Discord.MessageEmbed() 
