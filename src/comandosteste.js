@@ -4,6 +4,7 @@ const raca = require("./embeds/ComandsEmb");
 const magia = require("./embeds/magiaEmb");
 const mecanicas = require("./embeds/mecanicasemb");
 const acoes = require("./embeds/acoesemb");
+const sugestoes = require("./OutrosComandos/getsuggestion");
 const help = require("./embeds/ComandsEmb");
 
 const artifice = require("./embeds/embed");
@@ -53,13 +54,10 @@ module.exports = async function (msg){
   let command = tokens.shift();
   if(command.charAt(0) === "§"){
     command = command.substring(1);
-    console.log("a");
     if(command in CommandsClasses){
-      console.log("b");
       CommandsClasses[command](msg);
     }
     else if (command in ComandsGerais){
-      console.log("c");
       ComandsGerais[command](msg);
     }
   }
@@ -67,5 +65,8 @@ module.exports = async function (msg){
   if (msg.content === "§caçador"){
     msg.reply('caçador não é a tradução oficial de "ranger", tente §patrulheiro ')
   }
-
+  
+  if(msg.content.startsWith("§sugestoes") || msg.content.startsWith("§sugestões")){
+    sugestoes(msg,tokens)
+  }
 }
