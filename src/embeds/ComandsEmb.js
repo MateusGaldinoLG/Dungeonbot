@@ -34,7 +34,8 @@ const helpEmb = new Discord.MessageEmbed()
   .setTitle('Help')
   .setDescription('Esse é o comando de ajuda do bot, os comandos estão anexados no **§ola**.')
   .addFields({name: "Problemas comuns:", value: "Alguns problemas possíveis são:\nAcentos e letras diferentes: é importante dizer que só alguns comandos como olá e raça possuem diferença de acento (isso será adicionado no futuro)\n Conteúdo: para conteúdos adicionais, existem duas opções: eles estão **em construção**, então eles serão adicionados logo, ou eles nem estão. No primeiro caso, espere alguns dias, no segundo caso, fale com o criador :)", inline: true},
-  {name: "Redes sociais para indicação:", value: "Instagram: @mateus_glg\n Discord: Mateus G. Overdrive#6636", inline: true}
+  {name: "Redes sociais para indicação:", value: "Instagram: @mateus_glg\n Discord: Mateus G. Overdrive#6636", inline: true},
+  {name: "Comando para sugestões", value:"Se você quer comunicar sugestões diretamente, digite §sugestões/sugestoes e posteriormente sua sugestão"}
   )
 module.exports.olaEmb = olaEmb;
 module.exports.classeEmb = classeEmb;
