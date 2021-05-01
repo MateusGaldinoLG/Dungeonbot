@@ -7,7 +7,7 @@ No início, o Discordbot com algumas funcionalidades simples, como §classes, §
 Versão adicionada em 24 de Abril
 
 #### Features
-* Adicição de um comando de sugestões (§sugestões ou §sugestoes), que aceita sugestões e manda para um arquivo no servidor que vai anotar a sugestão
+* Adição de um comando de sugestões (§sugestões ou §sugestoes), que aceita sugestões e manda para um arquivo no servidor que vai anotar a sugestão
 #### Correções
 * Correção de alguns erros de digitação dentro do texto de classes
 * Foi retirado algumas linhas de código de testagem, a fim de otimizar o código
