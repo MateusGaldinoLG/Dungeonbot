@@ -21,6 +21,8 @@ const paladino = require("./embeds/embed");
 const patrulheiro = require("./embeds/embed");
 const monge = require("./embeds/embed");
 
+const racas = require("./racas/racas1")
+
 const CommandsClasses = {
   artifice: (msg) =>{msg.channel.send(artifice.artificeEmb)},
   barbaro: (msg) =>{msg.channel.send(barbaro.barbaroEmb)},
@@ -47,6 +49,11 @@ const ComandsGerais = {
   help: (msg) => {msg.channel.send(help.helpEmb)}
 }
 
+const CommandsRacas = {
+  elfo: (msg) => {msg.channel.send(racas.elfos)},
+  anão: (msg) => {msg.channel.send(racas.anoes)}, anao: (msg) => {msg.channel.send(racas.anoes)}
+}
+
 module.exports = async function (msg){
   if (msg.author.bot) return
 
@@ -59,6 +66,9 @@ module.exports = async function (msg){
     }
     else if (command in ComandsGerais){
       ComandsGerais[command](msg);
+    }
+    else if(command in CommandsRacas){
+      CommandsRacas[command](msg);
     }
   }
 

@@ -11,3 +11,13 @@ Versão adicionada em 24 de Abril
 #### Correções
 * Correção de alguns erros de digitação dentro do texto de classes
 * Foi retirado algumas linhas de código de testagem, a fim de otimizar o código
+
+### versão 1.1.2
+Versão adicionada em 24 de Abril
+
+#### Features
+* Inicio da adição de raças, com §elfo e §anão
+* Adição de um .gitignore para os modulos utilizados e de um .env para salvar senhas de forma segura
+#### Correções
+* Correção de erro de inicialização feito pelo "npm start"
+* Retirada de linhas do package.json que não estavam sendo usadas e poderiam causar confusão
