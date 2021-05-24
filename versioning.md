@@ -13,7 +13,7 @@ Versão adicionada em 24 de Abril
 * Foi retirado algumas linhas de código de testagem, a fim de otimizar o código
 
 ### versão 1.1.2
-Versão adicionada em 24 de Abril
+Versão adicionada em 24 de maio
 
 #### Features
 * Inicio da adição de raças, com §elfo e §anão
