@@ -51,7 +51,11 @@ const ComandsGerais = {
 
 const CommandsRacas = {
   elfo: (msg) => {msg.channel.send(racas.elfos)},
-  anão: (msg) => {msg.channel.send(racas.anoes)}, anao: (msg) => {msg.channel.send(racas.anoes)}
+  anão: (msg) => {msg.channel.send(racas.anoes)}, anao: (msg) => {msg.channel.send(racas.anoes)},
+  halfling: (msg) => {msg.channel.send(racas.halfling)},
+  humano: (msg) => {msg.channel.send(racas.humano)},
+  draconato: (msg) => {msg.channel.send(racas.draconato)},
+  gnomo: (msg) => {msg.channel.send(racas.gnomo)}
 }
 
 module.exports = async function (msg){

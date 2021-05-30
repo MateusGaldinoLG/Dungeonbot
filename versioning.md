@@ -1,6 +1,6 @@
 # Versioning
 
-## versão 1.1.0 - início
+## versão 1.1.0 - Sessão Zero
 No início, o Discordbot com algumas funcionalidades simples, como §classes, §ações, §mecanicas, etc. Ele possui uma conexão 24/7 a partir de um servidor do site replit.com, com uma "gambiarra" própria para manter ele rodando durante o dia todo.
 
 ### versão 1.1.1
@@ -21,3 +21,14 @@ Versão adicionada em 24 de maio
 #### Correções
 * Correção de erro de inicialização feito pelo "npm start"
 * Retirada de linhas do package.json que não estavam sendo usadas e poderiam causar confusão
+
+### versão 1.1.3
+Versão adicionada em 30 de maio
+
+#### Features
+* Continuação da adição de raças, com adição de mais 4 raças: §halfling, §humano, §draconato e §gnomo
+* Criação oficial de um §raças com as opções de comandos de raça possíveis dentro do bot, as 3 últimas porem ainda não estão disponívels
+* Aplicação oficial do .env dentro do index.js, que melhora o sistema de senhas de bots
+#### Correções
+* Correção de boa prática do cliente.on("ready", ...) para cliente.once("ready", ...), o que ajuda no entendimento do comando
+* Correção do link de versioning dentro do README.md

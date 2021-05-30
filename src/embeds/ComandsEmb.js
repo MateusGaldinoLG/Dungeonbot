@@ -21,7 +21,9 @@ const racaEmb = new Discord.MessageEmbed()
   .setColor('#0099ff')
   .setTitle('Raças')
   .setDescription('Em construção')
-  .setImage('https://bleedingcool.com/wp-content/uploads/2019/02/DD-Artificer-1200x628.jpg')
+  .addFields(
+    {name: 'Comandos:', value: '§anão \n§elfo \n§halfling \n§humano \n§draconato\ n§gnomo \n§meio-elfo \n§meio-orc \n§tiefling'}
+  )
 
 const magiaEmb = new Discord.MessageEmbed()
   .setColor('#0099ff')
