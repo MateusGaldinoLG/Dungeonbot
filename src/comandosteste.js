@@ -42,7 +42,7 @@ const CommandsClasses = {
 const ComandsGerais = {
   ola: (msg) => {msg.channel.send(ola.olaEmb)}, olá: (msg) => {msg.channel.send(ola.olaEmb)},
   classe: (msg) => {msg.channel.send(classe.classeEmb)},
-  raça: (msg) => {msg.channel.send(raca.racaEmb)},
+  raça: (msg) => {msg.channel.send(raca.racaEmb)}, raças: (msg) => {msg.channel.send(raca.racaEmb)},
   magias: (msg) =>{msg.channel.send(magia.otimizacaoEmb)},
   mecanicas: (msg) => {msg.channel.send(mecanicas.mecanicasEmb)},
   ações: (msg) => {msg.channel.send(acoes.acoesEmb)},
@@ -55,7 +55,10 @@ const CommandsRacas = {
   halfling: (msg) => {msg.channel.send(racas.halfling)},
   humano: (msg) => {msg.channel.send(racas.humano)},
   draconato: (msg) => {msg.channel.send(racas.draconato)},
-  gnomo: (msg) => {msg.channel.send(racas.gnomo)}
+  gnomo: (msg) => {msg.channel.send(racas.gnomo)},
+  meioelfo: (msg) => {msg.channel.send(racas.meioElfo)}, MeioElfo: (msg) => {msg.channel.send(racas.meioElfo)},
+  meioorc: (msg) => {msg.channel.send(racas.meioOrc)}, MeioOrc: (msg) => {msg.channel.send(racas.meioOrc)},
+  tiefling: (msg) => {msg.channel.send(racas.tiefling)}
 }
 
 module.exports = async function (msg){
@@ -65,6 +68,8 @@ module.exports = async function (msg){
   let command = tokens.shift();
   if(command.charAt(0) === "§"){
     command = command.substring(1);
+    command = command.replace('-', ''); //command for meio-elfo and meio-orc
+
     if(command in CommandsClasses){
       CommandsClasses[command](msg);
     }

@@ -32,3 +32,12 @@ Versão adicionada em 30 de maio
 #### Correções
 * Correção de boa prática do cliente.on("ready", ...) para cliente.once("ready", ...), o que ajuda no entendimento do comando
 * Correção do link de versioning dentro do README.md
+
+### versão 1.1.4
+Versão adicionada em 02 de junho
+
+#### Features
+* Adição das 3 últimas raças restantes: §meio-elfo, §meio-orc e §tiefling
+#### Correções
+* Correção da descrição do comando §raça
+* Correção do nome da subclasse de elfo "elfo negro" para "elfo sombrio"

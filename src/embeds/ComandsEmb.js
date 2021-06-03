@@ -20,7 +20,7 @@ const classeEmb = new Discord.MessageEmbed()
 const racaEmb = new Discord.MessageEmbed()
   .setColor('#0099ff')
   .setTitle('Raças')
-  .setDescription('Em construção')
+  .setDescription('Descrição das raças básicas de D&D 5e')
   .addFields(
     {name: 'Comandos:', value: '§anão \n§elfo \n§halfling \n§humano \n§draconato\ n§gnomo \n§meio-elfo \n§meio-orc \n§tiefling'}
   )
