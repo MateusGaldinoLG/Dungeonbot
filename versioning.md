@@ -41,3 +41,13 @@ Versão adicionada em 02 de junho
 #### Correções
 * Correção da descrição do comando §raça
 * Correção do nome da subclasse de elfo "elfo negro" para "elfo sombrio"
+
+### versão 1.2.4
+Versão adicionada em 18 de junho
+
+#### Features
+* Adição do comando §magias com links para otimização das magias de classe
+* Adição do comando §magia [nome-da-magia], com conexão a uma API de Dungeons and Dragons, que responde as informações da magia para o usuario
+* Instalação do pacote Axios para lidar com métodos HTTP relacionados à API
+#### Correções
+* Correção do nome de discordbot para Dungeonbot no Package.json

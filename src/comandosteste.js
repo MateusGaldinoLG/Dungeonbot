@@ -23,6 +23,8 @@ const monge = require("./embeds/embed");
 
 const racas = require("./racas/racas1")
 
+const magiasCommand = require("./magias/magiasCommand");
+
 const CommandsClasses = {
   artifice: (msg) =>{msg.channel.send(artifice.artificeEmb)},
   barbaro: (msg) =>{msg.channel.send(barbaro.barbaroEmb)},
@@ -87,5 +89,10 @@ module.exports = async function (msg){
   
   if(msg.content.startsWith("§sugestoes") || msg.content.startsWith("§sugestões")){
     sugestoes(msg,tokens)
+  }
+
+  if(msg.content.startsWith("§magia")){
+    tokens = tokens.join('-');
+    magiasCommand(msg, tokens);
   }
 }
