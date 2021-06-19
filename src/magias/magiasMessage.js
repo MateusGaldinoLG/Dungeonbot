@@ -10,7 +10,7 @@ module.exports = function magiasMessage(detailObj){
         .addFields(
             {name: "Details", value:`Casting time: ${detailObj.casting_time} \nRange : ${detailObj.range} \nComponents: ${detailObj.components} ${detailObj.material}\nDuration: ${detailObj.duration} \nClasses: ${detailObj.classes}`},
 
-            {name: "Description", value:`${detailObj.desc.join("\n")} \n**Higher Levels**: ${detailObj.higher_level}`}
+            {name: "Description", value:`${detailObj.desc.join("\n")} \n${detailObj.higher_level}`}
         )
 
     return magiaMessage;

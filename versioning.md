@@ -51,3 +51,15 @@ Versão adicionada em 18 de junho
 * Instalação do pacote Axios para lidar com métodos HTTP relacionados à API
 #### Correções
 * Correção do nome de discordbot para Dungeonbot no Package.json
+
+### versão 1.2.5
+Versão adicionada em 19 de junho
+
+#### Features
+* Refatoração da resposta de erro em magiaCommand.js para possível escalabilidade futura de exceptionhandling
+* Criação de anotações em formatAPI.js para futura manutenabilidade
+#### Correções
+* Correção do erro em comandosteste.js que fazia o bot ler mensagens do tipo §magias como uma mensagem de §magia, respondendo duas vezes e mandando uma resposta de erro desnecessaria.
+* Correção da parte do MessageEmbed em magiasMessage que criava dois textos de Higher Level ao ser chamada
+* Correção de erro na promessa de magiasCommand que retornava um erro mesmo que já tratado
+* Correção do s em addField para addFields que retornava um Embed com erro no Discord

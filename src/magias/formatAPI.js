@@ -3,13 +3,13 @@ module.exports = function validateMessage(detailObj){
         detailObj.higher_level = "";
     }else{
         detailObj.higher_level = `**On Higher Levels**: ${detailObj.higher_level}`
-    }
+    } //sees if magic has higher level details
 
     if(typeof detailObj.material === 'undefined'){
         detailObj.material = "";
     } else{
         detailObj.material = `(${detailObj.material})`;
-    }
+    } //sees if magic utilizes materials
 
     if(detailObj.level == 0){
         detailObj.level = 'cantrip'
@@ -20,8 +20,8 @@ module.exports = function validateMessage(detailObj){
     }else if(detailObj.level == 3){
         detailObj.level = `${detailObj.level}rd level`
     }else{
-            detailObj.level = `${detailObj.level}th level`
-    }
+        detailObj.level = `${detailObj.level}th level`
+    } //sets the magic level
 
     if(Array.isArray(detailObj.classes)){
         let classes = detailObj.classes
@@ -37,5 +37,5 @@ module.exports = function validateMessage(detailObj){
 
     if(detailObj.concentration == true){
         detailObj.duration = `Concentration, ${detailObj.duration}`
-    }
+    } //sees if the duration requires concetration
 }

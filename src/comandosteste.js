@@ -91,7 +91,7 @@ module.exports = async function (msg){
     sugestoes(msg,tokens)
   }
 
-  if(msg.content.startsWith("§magia")){
+  if(msg.content.startsWith("§magia ")){
     tokens = tokens.join('-');
     magiasCommand(msg, tokens);
   }
