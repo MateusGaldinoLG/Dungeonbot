@@ -9,7 +9,7 @@ client.once("ready", () => {
     console.log(`Logged in as ${client.user.tag} !`)
 } )
 
-const comandos = require("./comandosteste")
+const comandos = require("./comandos")
 client.on("message", comandos)
 
 keepAlive()

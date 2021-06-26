@@ -33,9 +33,12 @@ module.exports = function validateMessage(detailObj){
             }
         }
         detailObj.classes = classText;
-    }
+    } //sets the classes text
 
     if(detailObj.concentration == true){
         detailObj.duration = `Concentration, ${detailObj.duration}`
     } //sees if the duration requires concetration
+    
+    detailObj.desc = detailObj.desc.join("\n") //joins the desc array into one string
+    //console.log(detailObj.desc.length)
 }

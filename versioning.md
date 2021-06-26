@@ -63,3 +63,12 @@ Versão adicionada em 19 de junho
 * Correção da parte do MessageEmbed em magiasMessage que criava dois textos de Higher Level ao ser chamada
 * Correção de erro na promessa de magiasCommand que retornava um erro mesmo que já tratado
 * Correção do s em addField para addFields que retornava um Embed com erro no Discord
+
+### versão 1.2.6
+Versão adicionada em 26 de junho
+
+#### Features
+* Adição da biblioteca Nodemon para *hot reload* da aplicação em tempo de desenvolvimento
+#### Correções
+* Refatoração da função de formatAPI.js, assim como mudança do nome de algumas variáveis
+* Mudança do nome do arquivo de comandosteste.js para comandos.js

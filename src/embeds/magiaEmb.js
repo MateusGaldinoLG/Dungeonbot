@@ -1,6 +1,5 @@
 const Discord = require("discord.js")
 
-//TODO bugou
 const otimizacaoEmb = new Discord.MessageEmbed()
     .setColor('#0099ff')
 	.setTitle('Magias: otimização e mais')

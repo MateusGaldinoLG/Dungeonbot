@@ -19,8 +19,8 @@ async function pesquisarMagia(msg, nomeMagia){
     try{
         const response = await axios.get(`https://www.dnd5eapi.co/api/spells/${nomeMagia}`)
         return response;
-    }catch(error){
-        let status = error.response.status;
+    }catch(apiError){
+        let status = apiEerror.response.status;
         retornarErro(msg, status)
         return null;
     }

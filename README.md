@@ -29,7 +29,7 @@ Ao rodar, com **_node index.js_**, o cliente do discord loga no bot e espera um 
 const Discord = require("discord.js")
 const client = new Discord.Client() //creates a new client
 
-client.on("ready", () => {
+client.once("ready", () => {
     console.log(`Logged in as ${client.user.tag} !`)
 } ) //waits for ready, if ready logs the user tag of the client
 
@@ -67,6 +67,7 @@ const CommandsClasses = { //object
 ```
 The embeds are located in a different folder and are created with the MessageEmbed() function from Discord.js. Each embed is exported as a different function.  
 Os embeds estão em uma pasta separada e são criados com a função MessageEmbed() do Discord.js. Cada embed é exportado como uma função separada.
+
 ```javascript
 const artificeEmb = new Discord.MessageEmbed() 
   .setColor('#0099ff') 
@@ -80,4 +81,38 @@ const artificeEmb = new Discord.MessageEmbed()
     )
   .setImage('https://dreionsden.files.wordpress.com/2019/12/artificer.png')
 module.exports.artificeEmb = artificeEmb;
+```
+
+Now with the 1.2.4 version, the bot is connected, using the Axios package, with a D&D 5e API, the [D&D 5e API](https://www.dnd5eapi.co). It uses the axios.get() function to fetch the magic details asked by the user with the JSON, which is later modified to be send as Embed.  
+Com a versão 1.2.4, o bot agora se comunica, usando a biblioteca Axios, com uma API de D&D 5e, a [D&D 5e API](https://www.dnd5eapi.co). é usado a função axios.get() para pegar o JSON da magia pedida pelo usuário, que é tratado e enviado como Embed.
+
+```Javascript
+
+//async function to get the data
+async function pesquisarMagia(msg, nomeMagia){
+    try{
+        const response = await axios.get(`https://www.dnd5eapi.co/api/spells/${nomeMagia}`) //gets the data
+        return response; //returns the response to be treated
+    }catch(apiError){
+        let status = apiEerror.response.status;
+        retornarErro(msg, status) //returns an error message if something went wrong
+        return null;
+    }
+}
+
+//async function to send the data
+pesquisarMagia(msg, tokens).then((response) => {
+  if(response !== null){
+      msg.channel.send(magiaMessage(response.data)) //sends the embed
+  }
+
+//function to treat the error
+function retornarErro(msg, status){
+    if(status == 404){
+        msg.reply('O nome de magia digitado não foi encontrado, tente novamente de outra forma');
+    } else{
+        msg.reply('Ocorreu um erro, tente novamente mais tarde');
+    }
+}
+
 ```

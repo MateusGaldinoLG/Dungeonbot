@@ -10,8 +10,12 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "dev-start": "nodemon --delay 2050ms --watch  src ./src/index.js"
   },
   "author": "Mateus Galdino",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
