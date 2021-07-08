@@ -3,7 +3,7 @@ const Discord = require("discord.js")
 const olaEmb = new Discord.MessageEmbed()
   .setColor('#0099ff')
 	.setTitle('Apresentação')
-  .setDescription('Olá, eu sou um bot para detalhes de D&D, com informações básicas e tabelas úteis sobre diversas coisas')
+  .setDescription('Olá, esse é o DungeonBot 1.2.6, um bot para detalhes de D&D, com informações básicas e tabelas úteis sobre diversas coisas')
   .addFields(
     {name: 'Meus comandos são: ', value: '**§classe** -- podendo ser qualquer classe (como §monge, §mago, etc) \n**§Raça** -- podendo ser qualquer raça (como §elfo, §anão) \n**§magias** -- para sites com listas de magias e truques \n**§mecanicas** - para mecânicas básicas do jogo\n**§ações** - ações básicas do jogo e seus detalhes\n**§help** - para ajuda'}
   )
