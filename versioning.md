@@ -72,3 +72,14 @@ Versão adicionada em 26 de junho
 #### Correções
 * Refatoração da função de formatAPI.js, assim como mudança do nome de algumas variáveis
 * Mudança do nome do arquivo de comandosteste.js para comandos.js
+
+### versão 1.3.6
+Versão adicionada em 08 de julho
+
+#### Features
+* Adição de conectividade em desenvolvimento com banco de dados PostgresQL utilizando o Sequelize e o driver node-postgres(pg).
+* Criação de um banco de dados e de uma conexão com banco de dados a partir de controllers e repositories, também com a criação de um CRUD de sugestões
+
+#### Correções
+* Refatoração dos objetos command para outros arquivos, o que ajuda na escalabilidade e legibilidade do código.
+* Retirada do suggestions.txt, que expunha os textos do usuário

@@ -1,4 +1,4 @@
-const sugestoes = require("./OutrosComandos/getsuggestion");
+const setSuggestions = require("./OutrosComandos/suggestionsController");
 const magiasCommand = require("./magias/magiasCommand");
 
 const CommandsGerais = require("./CommandObjects/CommandsGeral");
@@ -30,7 +30,7 @@ module.exports = async function (msg){
   }
   
   if(msg.content.startsWith("§sugestoes") || msg.content.startsWith("§sugestões")){
-    sugestoes(msg,tokens)
+    setSuggestions(msg,tokens)
   }
 
   if(msg.content.startsWith("§magia ")){
