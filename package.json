@@ -1,6 +1,6 @@
 {
   "name": "dungeonbot",
-  "version": "1.2.5",
+  "version": "1.3.6",
   "description": "Discord bot focused on Dungeons and Dragons content.",
   "main": "index.js",
   "dependencies": {
