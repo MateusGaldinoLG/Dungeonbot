@@ -1,16 +1,20 @@
-const Discord = require("discord.js")
-const keepAlive = require("./server")
-require('dotenv').config(); //optional
-const client = new Discord.Client()
+const { Client, Intents } = require('discord.js');
+const keepAlive = require('./server');
+// optional
+require('dotenv').config();
+const client = new Client({
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+});
 
-console.log("Bot on")
+console.log('Bot on');
 
-client.once("ready", () => {
-    console.log(`Logged in as ${client.user.tag} !`)
-} )
+client.once('ready', () => {
+	console.log(`Logged in as ${client.user.tag} !`);
+});
 
-const comandos = require("./comandos")
-client.on("message", comandos)
+const comandos = require('./comandos');
+client.on('messageCreate', comandos);
 
-keepAlive()
-client.login(`${process.env.BOT_KEY}`)//insert your bot token here
+keepAlive();
+// insert your bot token here
+client.login(`${process.env.BOT_KEY}`);

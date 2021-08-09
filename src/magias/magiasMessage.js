@@ -1,9 +1,9 @@
-const Discord = require("discord.js");
+const {MessageEmbed} = require("discord.js");
 const validateMessage = require("./formatAPI")
 
 module.exports = function magiasMessage(detailObj){
     validateMessage(detailObj);
-    const magiaMessage = new Discord.MessageEmbed()
+    const magiaMessage = new MessageEmbed()
         .setTitle(`${detailObj.name}`)
         .setDescription(`${detailObj.level} ${detailObj.school.name}`)
         .addFields(

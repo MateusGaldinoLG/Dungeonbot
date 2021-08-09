@@ -83,3 +83,20 @@ Versão adicionada em 08 de julho
 #### Correções
 * Refatoração dos objetos command para outros arquivos, o que ajuda na escalabilidade e legibilidade do código.
 * Retirada do suggestions.txt, que expunha os textos do usuário
+
+### versão 2.0.0
+Versão adicionada em 09 de Agosto 
+
+#### Features
+* Update das bibliotecas Discord.js e Dotenv para, respectivamente, 13.0.1 e 10.0.0
+* Adição da bibliteca eslint para linting
+
+#### Correções
+* Mudança do event de 'message', para 'messageCreate'
+* Mudança dos detalhes do Client e de Intent
+* Mudança no formato da declaração dos Embeds, em criação de objetos, e mudança no envio de embeds em channel.send()
+* Mudança no formato das replys
+* Correção de um erro de DELETE do Sequelize
+
+#### Observações
+* Por causa da estrutura do Discord.js@13.0.1, o bot agora só pode rodar a partir da versão 16 do Nodejs
